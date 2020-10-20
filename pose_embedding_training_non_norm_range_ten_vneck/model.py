@@ -254,7 +254,7 @@ summary_merge_all = tf.summary.merge(scalars + z_j_histograms )#+ z_k_histograms
 summary_merge_valid = tf.summary.merge(scalars + z_j_histograms)# + z_k_histograms)
 
 
-def load_weights(iter_no, session, dir='./weights1/AE_humans_mads_yt_mpi_l1'):
+def load_weights(iter_no, session, dir='../../pretrained_weights/AE_humans_mads_yt_mpi_l1'):
     print ('trying to load iter weights...')
     tf.train.Saver(param_decoder).restore(session, '%s/decoder_iter-%d' % (dir, iter_no))
     tf.train.Saver(param_encoder).restore(session, '%s/encoder_iter-%d' % (dir, iter_no))
